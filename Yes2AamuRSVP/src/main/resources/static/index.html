@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yeshwant ❤️ Aamuktha - Wedding RSVP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      background: #f9f4f6;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('/images/wedding.jpg') no-repeat center center/cover;
+      filter: blur(10px) brightness(0.7);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px 30px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 30px rgba(183, 110, 121, 0.3);
+      border-radius: 0 0 40px 40px;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      color: #b76e79;
+      margin: 0;
+      letter-spacing: 4px;
+    }
+
+    header h2 {
+      font-weight: 300;
+      color: #a05c68;
+      font-size: 1.6rem;
+      margin-top: 5px;
+      letter-spacing: 2px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto 60px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 35px 35px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(183, 110, 121, 0.3);
+      transition: opacity 0.6s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    label {
+      display: block;
+      margin: 20px 0 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #6e4a54;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid #d8b6bb;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+      border-color: #b76e79;
+      outline: none;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      font-weight: 500;
+      color: #7b5a60;
+      font-size: 1rem;
+    }
+
+    .checkbox-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-time {
+      font-size: 0.85rem;
+      color: #7b5a60;
+      margin-top: 2px;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .radio-group label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+      color: #7b5a60;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #b76e79;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-top: 30px;
+      width: 100%;
+      font-weight: 700;
+      letter-spacing: 2px;
+      box-shadow: 0 6px 15px rgba(183, 110, 121, 0.4);
+      transition: background-color 0.4s ease;
+    }
+
+    button:hover {
+      background: #a45b65;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 1rem;
+      color: #a97c81;
+      font-weight: 300;
+    }
+
+    .thank-you-container {
+      display: none;
+      max-width: 600px;
+      margin: 60px auto;
+      text-align: center;
+      color: #b76e79;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .thank-you-container img {
+      max-width: 300px;
+      margin: 20px auto 0;
+      display: block;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(183, 110, 121, 0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Yeshwant ❤️ Aamuktha</h1>
+  <h2>You’re Invited to Celebrate Love</h2>
+</header>
+
+<div class="form-container" id="formContainer">
+  <form id="rsvpForm" autocomplete="off">
+    <label for="name">Your Full Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label>Which events will you attend?</label>
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" name="events" value="Haldi" />
+        <div class="checkbox-text">
+          <span><strong>Haldi</strong></span>
+          <span class="event-time">Sept 30th, 2025, 6:00 PM onwards</span>
+        </div>
+      </label>
+
+      <label>
+        <input type="checkbox" name="events" value="Pellikoduku and Mehendi" />
+        <div class="checkbox-text">
+          <span><strong>Pellikoduku & Mehendi</strong></span>
+          <span class="event-time">Oct 1st, 2025, 9:30 AM</span>
+        </div>
+      </label>
+
+      <label>
+        <input type="checkbox" name="events" value="Pelli" />
+        <div class="checkbox-text">
+          <span><strong>Pelli (Wedding)</strong></span>
+          <span class="event-time">Oct 2nd, 2025, 11:15 AM</span>
+        </div>
+      </label>
+
+      <label>
+        <input type="checkbox" name="events" value="Vratam" />
+        <div class="checkbox-text">
+          <span><strong>Satyanarayana Vratam</strong></span>
+          <span class="event-time">Oct 3rd, 2025, 9:00 AM onwards</span>
+        </div>
+      </label>
+    </div>
+
+    <label for="attendees">Number of People (including you)</label>
+    <input type="number" id="attendees" name="attendees" min="1" max="10" required />
+
+    <label>Do you need accommodation?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="accommodation" value="Yes" required /> Yes</label>
+      <label><input type="radio" name="accommodation" value="No" /> No</label>
+    </div>
+
+    <button type="submit">Submit RSVP</button>
+  </form>
+</div>
+
+<div class="thank-you-container" id="thankYouMessage">
+  <p>Thank you for your RSVP!</p>
+  <img src="/images/binnuAamu.jpg" alt="Thank You" />
+</div>
+
+<footer>
+  © 2025 Yeshwant & Aamuktha | We can’t wait to celebrate with you!
+</footer>
+
+<script>
+  const form = document.getElementById('rsvpForm');
+  const formContainer = document.getElementById('formContainer');
+  const thankYouMessage = document.getElementById('thankYouMessage');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      events: formData.getAll('events'),
+      attendees: formData.get('attendees'),
+      accommodation: formData.get('accommodation'),
+    };
+
+    try {
+      const response = await fetch('/rsvp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        formContainer.style.transition = 'opacity 0.8s ease';
+        formContainer.style.opacity = '0';
+        setTimeout(() => {
+          formContainer.style.display = 'none';
+          thankYouMessage.style.display = 'block';
+        }, 800);
+      } else {
+        alert('Submission failed. Please try again.');
+      }
+    } catch (err) {
+      alert('An error occurred. Please try again.');
+    }
+  });
+</script>
+</body>
+</html>
