@@ -1,0 +1,1 @@
+echo "web: java -jar target/Yes2AamuRSVP-0.0.1-SNAPSHOT.jar" > Procfile
